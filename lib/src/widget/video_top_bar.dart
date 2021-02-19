@@ -4,13 +4,13 @@ import "../video_top_bar_style.dart";
 import "../video_control_bar_style.dart";
 
 class VideoTopBar extends AnimatedWidget {
-  VideoTopBar(
-      {Key key,
-      Animation<double> animation,
-      VideoControlBarStyle videoControlBarStyle,
-      VideoTopBarStyle videoTopBarStyle,
-      this.onpop})
-      : videoTopBarStyle = videoTopBarStyle ?? VideoTopBarStyle(),
+  VideoTopBar({
+    Key key,
+    Animation<double> animation,
+    VideoControlBarStyle videoControlBarStyle,
+    VideoTopBarStyle videoTopBarStyle,
+    this.onpop,
+  })  : videoTopBarStyle = videoTopBarStyle ?? VideoTopBarStyle(),
         videoControlBarStyle = videoControlBarStyle ?? VideoControlBarStyle(),
         super(key: key, listenable: animation);
 
@@ -44,7 +44,7 @@ class VideoTopBar extends AnimatedWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   /// 返回按钮
-                  GestureDetector(
+                  InkWell(
                     onTap: () {
                       if (onpop != null) {
                         onpop();

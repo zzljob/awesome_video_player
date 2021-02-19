@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import "../video_control_bar_style.dart";
 
 class VideoBottomBar extends AnimatedWidget {
-  VideoBottomBar(
-      {Key key,
-      Animation<double> animation,
-      this.children,
-      VideoControlBarStyle videoControlBarStyle})
-      : videoControlBarStyle = videoControlBarStyle ?? VideoControlBarStyle(),
+  VideoBottomBar({
+    Key key,
+    Animation<double> animation,
+    this.children,
+    VideoControlBarStyle videoControlBarStyle,
+  })  : videoControlBarStyle = videoControlBarStyle ?? VideoControlBarStyle(),
         super(key: key, listenable: animation);
 
   final VideoControlBarStyle videoControlBarStyle;

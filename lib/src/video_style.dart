@@ -13,9 +13,9 @@ class VideoStyle {
     VideoLoadingStyle videoLoadingStyle,
     // this.videoCover = "",
     this.playIcon = const Icon(
-      Icons.play_circle_outline,
+      Icons.play_arrow,
       color: Color(0xFFA4A3A3),
-      size: 80,
+      size: 50,
       semanticLabel: "开始播放",
     ),
     this.replayIcon = const Icon(
